@@ -65,18 +65,31 @@ app.get('/search', (req, res, next) => {
 });
 
 app.post('/search', (req, res, next) => {
-  client.search( req.body.keyword ).then((searchData) => {
-    console.log(`\nsearch(${req.bodykeyword})`);
-    console.log(searchData);
+  client.search( req.body.keyword )
+    .then((searchData) => {
+      console.log(`\nsearch(${req.body.keyword})`);
+      console.log(searchData);
 
-    res.render(
-      'search-results-view.ejs',
-      {
-        searchResults: searchData.items,
-        searchTerm: req.body.keyword
-      }
-    );
-  });
+      res.render(
+        'search-results-view.ejs',
+        {
+          searchResults: searchData.items,
+          searchTerm: req.body.keyword
+        }
+      );
+    })
+    .catch((error) => {
+      console.log(`\nERROR!! search(${req.body.keyword})`);
+      console.log(error);
+
+      res.render(
+        'search-results-view.ejs',
+        {
+          searchResults: [],
+          searchTerm: req.body.keyword
+        }
+      );
+    });
 });
 
 
