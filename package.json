@@ -1,15 +1,27 @@
 {
   "name": "chuck-norris",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
-    "chucknorris-io": "^1.0.4"
+    "body-parser": "^1.17.1",
+    "chucknorris-io": "^1.0.4",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-ejs-layouts": "^2.3.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nizar Khalife Iglesias <khalifenizar@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironhack-miami-ptwd-jan-2017/chuck-norris.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ironhack-miami-ptwd-jan-2017/chuck-norris/issues"
+  },
+  "homepage": "https://github.com/ironhack-miami-ptwd-jan-2017/chuck-norris#readme",
+  "description": ""
 }

@@ -1,0 +1,15 @@
+<h2> Search Results </h2>
+
+<form method="post" action="/search">
+  <label for="search-input"> Keyword </label>
+  <input  id="search-input" type="search" name="keyword"
+    value="<%= searchTerm %>">
+
+  <button> Search </button>
+</form>
+
+<ul>
+  <% searchResults.forEach((oneJoke) => { %>
+    <li> <%= oneJoke.value %> </li>
+  <% }) %>
+</ul>
